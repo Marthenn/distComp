@@ -15,7 +15,7 @@ TiB = 1024 * GiB
 
 #################################### task #####################################
 WORKER_STOP_COMMAND = "WORKER_COMMAND_CLOSE"
-TASK_FORMAT_SEPARATOR = ":"
+TASK_FORMAT_SEPARATOR = ";"
 
 
 #################################### redis #####################################
