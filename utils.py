@@ -181,14 +181,14 @@ class Task:
 
 class EmptyTask(Task):
     def __init__(self):
-        super(EmptyTask, self).__init__(f"0;0;0;0;0")
+        super(EmptyTask, self).__init__(f"0:0:0:0:0")
 
     def __str__(self):
         return "Empty Task"
 
 class EndofTask(Task):
     def __init__(self):
-        super(EndofTask, self).__init__(f"{WORKER_STOP_COMMAND};0;0;0;{WORKER_STOP_COMMAND}")
+        super(EndofTask, self).__init__(f"{WORKER_STOP_COMMAND}:0:0:0:{WORKER_STOP_COMMAND}")
 
     def __str__(self):
         return "End of Task"
@@ -215,7 +215,7 @@ def test_runner_config():
 
 
 def test_task():
-    task_str = "shell;5;8;0;echo hello"
+    task_str = "shell:5:8:0:echo hello"
     task = Task(task_str)
     print(task)
 
