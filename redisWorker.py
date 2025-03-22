@@ -24,8 +24,8 @@ def run_demo_task(task_params):
                        shell=True,
                        stdout=subprocess.PIPE,
                        stderr=subprocess.PIPE)
-    o_stdout = p.stdout.decode("ascii").strip()
-    o_stderr = p.stderr.decode("ascii").strip()
+    o_stdout = p.stdout.decode("utf-8").strip()
+    o_stderr = p.stderr.decode("utf-8").strip()
     return p.returncode, o_stdout, o_stderr
 
 
@@ -39,8 +39,8 @@ def run_shell_task(task_params):
                        shell=True,
                        stdout=subprocess.PIPE,
                        stderr=subprocess.PIPE)
-    o_stdout = p.stdout.decode("ascii").strip()
-    o_stderr = p.stderr.decode("ascii").strip()
+    o_stdout = p.stdout.decode("utf-8").strip()
+    o_stderr = p.stderr.decode("utf-8").strip()
     return p.returncode, o_stdout, o_stderr
 
 
